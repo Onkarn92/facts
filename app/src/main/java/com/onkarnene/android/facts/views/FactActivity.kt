@@ -1,18 +1,19 @@
 /*
- * Created by Onkar Nene on 17/7/19 11:28 AM
+ * Created by Onkar Nene on 17/7/19 2:55 PM
  *
  * Copyright (c) 2019 Onkar Nene. All rights reserved.
  */
 
-package com.onkarnene.android.facts
+package com.onkarnene.android.facts.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.onkarnene.android.facts.R.layout
 
-class MainActivity : AppCompatActivity() {
+class FactActivity : AppCompatActivity() {
 	
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_main)
+		setContentView(layout.activity_fact)
 	}
 }
