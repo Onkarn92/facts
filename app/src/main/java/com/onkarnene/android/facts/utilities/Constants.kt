@@ -6,3 +6,12 @@
 
 package com.onkarnene.android.facts.utilities
 
+// Java serialization/deserialization Keys
+const val TITLE = "title"
+const val DESCRIPTION = "description"
+const val IMAGE_HREF = "imageHref"
+const val ROWS = "rows"
+
+// Generics
+const val EMPTY_STRING = ""
+const val NA = "N/A"
