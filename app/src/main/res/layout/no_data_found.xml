@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white"
+		android:paddingStart="@dimen/value_20"
+		android:paddingEnd="@dimen/value_20">
+	
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/noDataTitleText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:drawableTop="@drawable/ic_warning_oops"
+			android:drawablePadding="@dimen/value_5"
+			android:textAlignment="center"
+			android:textColor="@color/colorPrimaryText"
+			android:textSize="@dimen/text_size_16"
+			app:fontFamily="@font/montserrat_bold" />
+	
+	<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/noDataSubtitleText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/noDataTitleText"
+			android:layout_marginTop="@dimen/value_5"
+			android:textAlignment="center"
+			android:textColor="@color/colorSecondaryText"
+			android:textSize="@dimen/text_size_12"
+			app:fontFamily="@font/montserrat" />
+</RelativeLayout>

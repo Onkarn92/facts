@@ -104,7 +104,7 @@ dependencies {
 	implementation "org.parceler:parceler-api:${parceler_version}"
 	kapt "org.parceler:parceler:${parceler_version}"
 	
-	// Dependency Injection
-	implementation "com.google.dagger:dagger:${dagger_version}"
-	kapt "com.google.dagger:dagger-compiler:${dagger_version}"
+	// Architecture Components
+	implementation "androidx.lifecycle:lifecycle-extensions:${lifecycle_version}"
+	implementation "androidx.lifecycle:lifecycle-common-java8:${lifecycle_version}"
 }

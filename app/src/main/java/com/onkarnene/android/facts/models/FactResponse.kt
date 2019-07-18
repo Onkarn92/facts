@@ -18,7 +18,7 @@ import org.parceler.ParcelConstructor
  */
 @Parcel(BEAN)
 data class FactResponse @ParcelConstructor constructor(
-		@SerializedName(TITLE) var title: String? = null,
+		@SerializedName(TITLE) var title: String,
 		
-		@SerializedName(ROWS) var rows: ArrayList<Fact> = arrayListOf()
+		@SerializedName(ROWS) var rows: ArrayList<Fact>
 )

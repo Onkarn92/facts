@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.onkarnene.android.facts.R
 import com.onkarnene.android.facts.adapters.FactListAdapter.ViewHolder
+import com.onkarnene.android.facts.interfaces.FactCallback
 import com.onkarnene.android.facts.models.Fact
 import com.onkarnene.android.facts.utilities.NA
 import kotlinx.android.synthetic.main.item_fact_list.view.*
@@ -20,7 +21,7 @@ import kotlinx.android.synthetic.main.item_fact_list.view.*
 /**
  * Responsible for holding and recycling the fact items in a list.
  */
-class FactListAdapter(private val callback: Callback) : RecyclerView.Adapter<ViewHolder>() {
+class FactListAdapter(private val callback: FactCallback) : RecyclerView.Adapter<ViewHolder>() {
 	
 	private val items = mutableListOf<Fact>()
 	
@@ -29,16 +30,18 @@ class FactListAdapter(private val callback: Callback) : RecyclerView.Adapter<Vie
 	 *
 	 * @param facts to be added in list.
 	 */
-	fun setItems(facts: ArrayList<Fact>) {
-		facts.removeAll {
+	fun setItems(facts: ArrayList<Fact>?) {
+		facts?.removeAll {
 			it.title.isNullOrBlank() && it.description.isNullOrBlank() && it.imageHref.isNullOrBlank()
 		}
-		for (item in facts) {
-			if (!items.contains(item)) {
-				items.add(item)
+		if (facts != null) {
+			for (item in facts) {
+				if (!items.contains(item)) {
+					items.add(item)
+				}
 			}
+			notifyDataSetChanged()
 		}
-		notifyDataSetChanged()
 	}
 	
 	override fun onCreateViewHolder(
@@ -78,13 +81,5 @@ class FactListAdapter(private val callback: Callback) : RecyclerView.Adapter<Vie
 			Glide.with(this.itemView.factImage).load(this.fact.imageHref).centerCrop().placeholder(R.drawable.loading_placeholder)
 					.error(R.drawable.error_placeholder).into(this.itemView.factImage)
 		}
-	}
-	
-	interface Callback {
-		
-		/**
-		 * Triggers when specific list item gets click event.
-		 */
-		fun onItemClick(fact: Fact)
 	}
 }

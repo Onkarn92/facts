@@ -19,9 +19,9 @@ import org.parceler.ParcelConstructor
  */
 @Parcel(BEAN)
 data class Fact @ParcelConstructor constructor(
-		@SerializedName(TITLE) var title: String? = null,
+		@SerializedName(TITLE) var title: String?,
 		
-		@SerializedName(DESCRIPTION) var description: String? = null,
+		@SerializedName(DESCRIPTION) var description: String?,
 		
-		@SerializedName(IMAGE_HREF) var imageHref: String? = null
+		@SerializedName(IMAGE_HREF) var imageHref: String?
 )
