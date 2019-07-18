@@ -2,7 +2,6 @@
 
 [![Platform](https://img.shields.io/badge/platform-android-yellow.svg)]()
 [![Programming Language](https://img.shields.io/badge/language-kotlin-orange.svg)]()
-[![Scrutinizer Build](https://api.travis-ci.org/Onkarn92/facts.svg)]()
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](/LICENSE.md)
 
 ## Requirements
